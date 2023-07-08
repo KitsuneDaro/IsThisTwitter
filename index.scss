@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black !important;
+    user-select: none;
+}
+
+canvas#MainCanvas {
+    margin: 0;
+    animation-name: fadein;
+    animation-duration: 2s;
+    background-color: black !important;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+div#Title {
+    position: absolute;
+    left: 1.5em;
+    top: 1em;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+div#RideOn {
+    position: absolute;
+    display: flex;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+div#Center {
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    margin: auto;
+    width: 13em;
+    height: 20em;
+}
+
+div#Upper {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+
+    background-color: rgb(24, 24, 24);
+    gap: 0;
+
+    border: 1px solid;
+    border-radius: 1em;
+    border-color: #505050;
+}
+
+div#QRcode {
+    border-bottom: 1px solid;
+    border-color: #505050;
+
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    div{
+        position: absolute;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        object-position: 0 0;
+
+        img {
+            position: relative;
+            width: 10em;
+            margin: auto;
+            border-radius: 1em;
+        }
+    }
+}
+
+div#QRcode::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+div#Icons {
+    display: flex;
+    height: 3em;
+
+    div {
+        display: flex;
+        flex-flow: row;
+        width: 50%;
+
+        img {
+            position: relative;
+            margin: auto;
+            width: 1.1em;
+        }
+    }
+}
+
+div#Explanation {
+    color: white;
+    display: flex;
+    flex-grow: 1;
+
+    span {
+        margin: auto;
+        font-size: 1em;
+        font-weight: bold;
+        
+        text-align: center;
+    }
+}

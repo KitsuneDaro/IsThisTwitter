@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- WebGLを奇麗に見せる -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- three.jsを読み込む -->
+    <script src="https://unpkg.com/three@0.146.0/build/three.min.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.152.2/examples/jsm/"
+          }
+        }
+      </script>
+    <!-- main.jsを読み込む -->
+    <script src="main.js" type="module"></script>
+</head>
+
+<body>
+    <canvas id="MainCanvas"></canvas>
+    <div id="Title">Twitter</div>
+    <div id="RideOn">
+        <div id="Center">
+            <div id="Upper">
+                <div id="QRcode">
+                    <div>
+                        <img src="QRcode.png"></img>
+                    </div>
+                </div>
+                <div id="Icons">
+                    <div id="Apple"><img src="Apple.png"></div>
+                    <div id="Android"><img src="Android.png"></div>
+                </div>
+            </div>
+            <div id="Explanation">
+                <span>
+                    アプリをインストール
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
